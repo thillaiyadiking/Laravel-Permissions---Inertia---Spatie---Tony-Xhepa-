@@ -78,7 +78,7 @@ class UserController extends Controller
     {
         $user->load(['roles', 'permissions']);
         return Inertia::render('Admin/Users/Edit', [
-            'user' => new UserSharedResource($user),
+            'user' => new UserResource($user),
             'roles' => RoleResource::collection(Role::all()),
             'permissions' => PermissionResource::collection(Permission::all())
 

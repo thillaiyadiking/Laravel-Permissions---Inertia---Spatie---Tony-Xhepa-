@@ -84,7 +84,7 @@ class RoleController extends Controller
         // return $request->input();
 
         $role->syncPermissions($request->input('permissions.*.name'));
-        return to_route('roles.index');
+        return back();
     }
 
     /**
